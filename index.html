@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heads-Tails</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Heads-Tails</h1>
+        <P class="start">Start First</P>
+        <p class="who-win"></p>
+        <button>Heads</button>
+        <button>Tails</button>
+        <p class="score"></p>
+    </div>
+
+    <script>
+        const star = document.querySelector(".start");
+        const buttons = document.querySelectorAll("button");
+        const winner = document.querySelector(".who-win")
+        const score = document.querySelector(".score");
+        const coinArray = ["Heads", "Tails"];
+        const scores = [0, 0];
+
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", e => {
+                star.remove();
+                const playerGuess = e.target.innerText;
+                const computerChoose = coinArray[Math.floor(Math.random() * 2)];
+
+                if (playerGuess === computerChoose) {
+                    winner.innerHTML = "Player Win!!!"
+                    scores[0]++;
+                }
+                else {
+                    winner.innerHTML = "Computer Win!!!";
+                    scores[1]++;
+                }
+                score.innerHTML = `Score : ${scores[0]} , ${scores[1]} `;
+            })
+        }
+    </script>
+</body>
+
+</html>

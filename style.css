@@ -1,0 +1,25 @@
+body{
+    background: #800080;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc0cb, #800080);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffc0cb, #800080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.container{
+    color:#00fa9a;
+    width: 20%;
+    margin: auto;
+    margin-top: 12em;
+    font-size: 1.5em;
+}
+button{
+    margin: 2em 0 0.8em 0.8em;
+    padding: 1.2em;
+    background-color: rgb(51, 94, 175);
+    border-radius: 5px;
+    border: #FFF dashed 2px;
+    color: #fff;
+}
+.score{
+    font-weight: bold;
+    color: #2ecf84;
+}
